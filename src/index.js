@@ -89,13 +89,13 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🧬EVIL-MD V2 using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🧬EVIL-MD-V2 using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: true,
-            browser: ["EVIL-MD V2", "safari", "3.3"],
+            browser: ["EVIL-MD-V2", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
@@ -114,8 +114,8 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("EVIL-MD V2 CONNECTED Successful️ ✅"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `EVIL-MD V2 CONNECTED Successful️ ✅` });
+                    console.log(chalk.green("EVIL-MD-V2 CONNECTED Successful️ ✅"));
+                    Matrix.sendMessage(Matrix.user.id, { text: `EVIL-MD-V2 CONNECTED Successful️ ✅` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
