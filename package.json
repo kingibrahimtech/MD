@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start src/index.js --deep-monitoring --attach --name EVIL-MD V2",
-    "stop": "pm2 stop EVIL-MD V2",
-    "restart": "pm2 restart EVIL-MD V2"
+    "start": "pm2 start src/index.js --deep-monitoring --attach --name EVIL-MD-V2",
+    "stop": "pm2 stop EVIL-MD-V2",
+    "restart": "pm2 restart EVIL-MD-V2"
   },
   "keywords": ["evil-md", "whatsappbot", "evil-md v2"],
   "author": "Dark Evil",
